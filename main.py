@@ -24,8 +24,11 @@ else:
   st.write("csv形式のファイルをアップロードしてください")
 
 #モデルをロードする
-with open('rfr.pickle', mode='rb') as f:  # with構文でファイルパスとバイナリ読み来みモードを設定
-    loaded_rfr = pickle.load(f)                  # オブジェクトをデシリアライズ
+# loading in the model to predict on the data
+pickle_in = open('rfr.pkl', 'rb')
+loaded_rfr = pickle.load(pickle_in)
+# with open('rfr.pickle', mode='rb') as f:  # with構文でファイルパスとバイナリ読み来みモードを設定
+#     loaded_rfr = pickle.load(f)                  # オブジェクトをデシリアライズ
 
 #データ前処理
 if uploaded_file is not None:
