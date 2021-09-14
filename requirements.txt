@@ -1,3 +1,4 @@
 streamlit
 pip
 pandas
+sklearn
